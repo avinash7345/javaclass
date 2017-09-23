@@ -1,0 +1,31 @@
+package com.bigacademe.p1.basics;
+//This class is called execution logic class which contains main method.
+public class HelloWorld {
+public static void main (String[] args) {
+Student.displaySchoolInfo();
+Student s1 = new Student();
+Student s2 = new Student();
+s1.stdno = 100;
+s1.stdname = "avinash";
+s1.stdfee = 200;
+s2.stdno = 300;
+s2.stdname = "abhilash";
+s2.stdfee = 400;
+s1.displayStudentInfo();
+s2.displayStudentInfo();
+}
+}
+
+package com.bigacademe.p1.basics;
+//This is business logic class without the main method.
+public class Student {
+int stdno;
+String stdname;
+int stdfee;
+void displayStudentInfo() {
+	System.out.println(stdno+"   "+stdname+" "+stdfee);
+}
+static void displaySchoolInfo() {
+	System.out.println("Bhashyam public school");
+}
+}
