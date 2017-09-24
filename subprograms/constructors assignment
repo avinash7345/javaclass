@@ -1,0 +1,52 @@
+package com.cts.vms;
+
+public class Student {
+	public static void main(String[] args) {
+
+Student s1 = new Student(10,"avi",20,30,40);
+Student s2 = new Student(50,"abhi",60,70,80);
+Student s3 = new Student(90,"dingu",100,110,120);
+
+s1.displayStudentDetails();
+s1.displayStdPermance();
+s1.displayschoolAddress();
+s2.displayStudentDetails();
+s2.displayStdPermance();
+s2.displayschoolAddress();
+s3.displayStudentDetails();
+s3.displayStdPermance();
+s3.displayschoolAddress();
+
+}
+	int stdno;
+	String stdname;
+	int m1;
+	int m2;
+	int m3;
+	static String schoolAddress;
+
+	Student(int stdno,String stdname,int m1,int m2,int m3){
+	this.stdno=stdno;
+	this.stdname=stdname;
+	this.m1=m1;
+	this.m2=m2;
+	this.m3=m3;
+}
+
+void displayStudentDetails(){
+	System.out.println("the student no is"+stdno);
+	System.out.println("The student name is"+stdname);
+	
+}
+void displayStdPermance() {
+	System.out.println("The value of m1 is "+m1);
+	System.out.println("The value of m2 is "+m2);
+	System.out.println("The value of m3 is "+m3);
+	float avg;
+	avg = (m1+m2+m3)/3;
+	System.out.println("The avg is"+avg);
+}
+void displayschoolAddress() {
+	System.out.println("The address is 4700 taft blvd");
+}
+}
