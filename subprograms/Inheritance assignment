@@ -1,0 +1,69 @@
+//person class//
+package com.bigacademe.p1.constructors.inheritance;
+
+public class Person {
+String fname;
+String lname;
+
+Person(String fname,String lname){
+	this.fname=fname;
+	this.lname=lname;
+	System.out.println("Parameterised constructor of person");
+	
+	System.out.println("The values of fname  are" +fname+ " and lname are" +lname);
+}
+
+}
+//student class extends person class//
+package com.bigacademe.p1.constructors.inheritance;
+
+public class Student extends Person {
+	int stdno;
+	int stdadd;
+	
+	Student(int stdno,int stdadd) {
+		super("avinash","abhilash");
+		this.stdno=stdno;
+		this.stdadd=stdadd;
+		System.out.println("Parameterised constructor of student");
+		
+		System.out.println("The values of stdno"+stdno+"values of stdadd"+stdadd);
+	
+	
+	}
+}
+//trainer class extends student class//
+package com.bigacademe.p1.constructors.inheritance;
+
+public class Trainer {
+	int subject;
+	int salary;
+	int type;
+	
+	Trainer(int subject,int salary,int type){
+		this.subject=subject;
+		this.salary=salary;
+		this.type=type;
+		
+		System.out.println("Parameterised constuctor of Trainer");
+		
+		System.out.println("The values of int " +subject+ "values of salary" +salary+ "values of type" +type);
+	}
+
+}
+//  Execution class//
+package com.bigacademe.p1.constructors.inheritance;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Student obj = new Student(10,20);
+		Trainer obj1 = new Trainer(30,40,50);
+		
+		
+
+	}
+
+}
+
